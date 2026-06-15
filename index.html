@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EFFORTS 1 — Official Cinematic Webtoon Site</title>
+  <meta name="description" content="Broken Dreams. Silent Efforts. Loud Success. Experience the official cinematic landing page of EFFORTS 1, the ultimate motivational coding webtoon.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EFFORTS 1 — Official Cinematic Webtoon">
+  <meta property="og:description" content="Broken Dreams. Silent Efforts. Loud Success. Enter the world of Rohit's middle-class coding & startup struggles.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Standard Stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+
+
+  <!-- Custom Cursor Elements -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-glow" class="custom-cursor-glow"></div>
+
+  <!-- Audio Synth Equalizer Trigger -->
+  <div id="ambient-audio-ctrl" class="audio-panel" title="Play/Pause Ambient Synth">
+    <div class="audio-label">CINEMATIC SYNTH</div>
+    <div class="equalizer-icon" id="eq-bars">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand cinematic-text" id="nav-brand">EFFORTS 1</a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav-links" id="nav-menu">
+        <a href="#hero" class="nav-item active">Home</a>
+        <a href="#rohit" class="nav-item">Rohit</a>
+        <a href="#timeline" class="nav-item">The Journey</a>
+        <a href="#why-read" class="nav-item">Why Read</a>
+        <a href="#read-now" class="nav-item gold-border">Read Now</a>
+        <a href="#coming-soon" class="nav-item">Efforts 2</a>
+        <a href="#creator" class="nav-item">Creator</a>
+      </nav>
+
+      <!-- Hamburger Menu for Mobile -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero Section -->
+  <section id="hero" class="hero-section">
+    <!-- Interactive Background Canvas (Rain + Dust floating particles) -->
+    <canvas id="hero-canvas"></canvas>
+    
+    <!-- Cinematic Golden Vapor Effects -->
+    <div class="fog-overlay"></div>
+    <div class="golden-orb container-orb-1"></div>
+    <div class="golden-orb container-orb-2"></div>
+    
+    <div class="hero-container">
+      <div class="hero-main">
+        <span class="hero-eyebrow pre-reveal">STORYVERSE PRESENTS</span>
+        <h1 class="hero-title cinematic-text" id="hero-title">EFFORTS 1</h1>
+        
+        <div class="hero-subtitle">
+          <span class="sub-item" style="--d: 0.1s;">BROKEN DREAMS.</span>
+          <span class="sub-item" style="--d: 0.4s;">SILENT EFFORTS.</span>
+          <span class="sub-item" style="--d: 0.7s;">LOUD SUCCESS.</span>
+        </div>
+        
+        <p class="hero-description pre-reveal-desc">
+          A cinematic motivational webtoon about dreams, heartbreak, coding, family sacrifices, self-improvement, startup struggles, and the journey from pain to purpose.
+        </p>
+        
+        <div class="hero-actions pre-reveal-actions">
+          <a href="https://drive.google.com/file/d/1LdAxqytUTKYrrRE8kuTuIsr-YO2SDskT/view?usp=sharing" target="_blank" class="btn btn-primary btn-glow" id="hero-primary-btn" rel="noreferrer">
+            <span class="btn-text">READ FULL COMIC</span>
+            <div class="btn-shine"></div>
+          </a>
+          <a href="#rohit" class="btn btn-secondary" id="hero-secondary-btn">
+            <span class="btn-text">START JOURNEY</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll Down Indicator -->
+    <a href="#rohit" class="scroll-indicator" id="scroll-indicator" aria-label="Scroll Down">
+      <div class="indicator-mouse">
+        <div class="indicator-wheel"></div>
+      </div>
+      <span class="scroll-text">DISCOVER ROHIT</span>
+    </a>
+  </section>
+
+  <!-- Section 2: Who is Rohit -->
+  <section id="rohit" class="rohit-section section-padding">
+    <div class="ambient-glow bg-glow-right"></div>
+    <div class="section-container">
+      <div class="section-header center-align scroll-reveal-up">
+        <span class="section-subtitle">THE PROTAGONIST</span>
+        <h2 class="section-title cinematic-text" id="rohit-section-title">Meet Rohit</h2>
+        <p class="section-desc">A middle-class dreamer trying to build a future through effort, discipline, and absolute consistency.</p>
+      </div>
+
+      <!-- Attributes Grid -->
+      <div class="attributes-grid">
+        <!-- Card 1 -->
+        <div class="attrib-card scroll-reveal-card" id="card-attrib-1">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <!-- Icon representing 'No Talent' -->
+            <svg class="attrib-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 class="card-title">No Talent</h3>
+          <p class="card-text">He wasn't born a genius. Everything he achieved had to be carved with direct raw labor and hours of intense concentration.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="attrib-card scroll-reveal-card" id="card-attrib-2">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <!-- Icon representing 'Middle Class' -->
+            <svg class="attrib-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M9 21V9M15 21V9"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Middle Class</h3>
+          <p class="card-text">Bound by financial anxiety and expectations. To fail means losing everything; resources are scarce, risk is terrifying.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="attrib-card scroll-reveal-card" id="card-attrib-3">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <!-- Icon representing 'No Support' -->
+            <svg class="attrib-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18 21a6 6 0 0 0-12 0"/>
+              <circle cx="12" cy="10" r="4"/>
+              <path d="M4 19a4 4 0 0 1 0-8M20 19a4 4 0 0 0 0-8"/>
+            </svg>
+          </div>
+          <h3 class="card-title">No Support</h3>
+          <p class="card-text">Fighting a solitary battle in the dark. No mentors, no backing. Just backhanded comments and skeptical looks.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="attrib-card scroll-reveal-card" id="card-attrib-4">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <!-- Icon representing 'Lots of Pain' -->
+            <svg class="attrib-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              <path d="M6 8l12 8"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Lots Of Pain</h3>
+          <p class="card-text">Wounds from failures, public embarrassments, and promises broken. A fuel that burns slowly, deep inside.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="attrib-card scroll-reveal-card" id="card-attrib-5">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <!-- Icon representing 'Overthinking' -->
+            <svg class="attrib-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 12a4 4 0 1 1 8 0 4 4 0 1 1-8 0"/>
+              <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Overthinking</h3>
+          <p class="card-text">Mind constantly racing at 3 AM. Questioning every move, fearing the future, analyzing every word.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="attrib-card scroll-reveal-card" id="card-attrib-6">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <!-- Icon representing '100% Efforts' -->
+            <svg class="attrib-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <h3 class="card-title">100% Efforts</h3>
+          <p class="card-text">The equalizer. When variables are skewed and luck is absent, his sheer will, discipline, and work ethic shift the balance.</p>
+        </div>
+      </div>
+
+      <!-- Core Rohit Quote -->
+      <div class="rohit-quote-block scroll-reveal-up" id="rohit-quote">
+        <span class="quote-sign font-serif">“</span>
+        <blockquote class="cinematic-quote">
+          This is not a superhero story.<br>
+          <span class="highlight-gold font-bold">This is a survival story.</span>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Interactive Timeline -->
+  <section id="timeline" class="timeline-section section-padding">
+    <div class="ambient-glow bg-glow-left"></div>
+    <div class="section-container">
+      <div class="section-header center-align scroll-reveal-up">
+        <span class="section-subtitle">THE EVOLUTION</span>
+        <h2 class="section-title cinematic-text" id="timeline-section-title">The Journey of EFFORTS 1</h2>
+        <p class="section-desc">Trace the evolution from total obscurity to powerful breakthrough. Standard progress has no short-cuts.</p>
+      </div>
+
+      <!-- Timeline Component -->
+      <div class="timeline-container">
+        <!-- Connecting Glow Line -->
+        <div class="timeline-line" id="timeline-indicator-line"></div>
+        <div class="timeline-line-active" id="timeline-active-line"></div>
+
+        <!-- Step 1 -->
+        <div class="timeline-step left-step scroll-reveal-left" data-step="1">
+          <div class="timeline-dot"><span class="dot-inner"></span></div>
+          <div class="timeline-card">
+            <span class="step-num">STAGE 01</span>
+            <h3 class="step-title">Broken Start</h3>
+            <p class="step-desc">Staring at academic failure, rejections from basic jobs, and absolute isolation. Rohit realizes that hoping is not a strategy.</p>
+            <span class="step-badge">Zero Comforts</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step right-step scroll-reveal-right" data-step="2">
+          <div class="timeline-dot"><span class="dot-inner"></span></div>
+          <div class="timeline-card">
+            <span class="step-num">STAGE 02</span>
+            <h3 class="step-title">Silent Efforts</h3>
+            <p class="step-desc">Acquiring a low-end laptop. Discovering software engineering. Compiling code through sleepless 16-hour cycles after daylight chores.</p>
+            <span class="step-badge">Deep Grind</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step left-step scroll-reveal-left" data-step="3">
+          <div class="timeline-dot"><span class="dot-inner"></span></div>
+          <div class="timeline-card">
+            <span class="step-num">STAGE 03</span>
+            <h3 class="step-title">Heartbreak</h3>
+            <p class="step-desc">The sudden collapse of relationships and peer circles. Being told his dreams are delusional. The emotional storm begins.</p>
+            <span class="step-badge">The Cold Chill</span>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step right-step scroll-reveal-right" data-step="4">
+          <div class="timeline-dot"><span class="dot-inner"></span></div>
+          <div class="timeline-card">
+            <span class="step-num">STAGE 04</span>
+            <h3 class="step-title">Family Sacrifices</h3>
+            <p class="step-desc">Watching parents skip medicine purchases to fund electricity. Realizing any wasted hour directly harms his family's survival.</p>
+            <span class="step-badge">Pure Duty</span>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-step left-step scroll-reveal-left" data-step="5">
+          <div class="timeline-dot"><span class="dot-inner"></span></div>
+          <div class="timeline-card">
+            <span class="step-num">STAGE 05</span>
+            <h3 class="step-title">Turning Point</h3>
+            <p class="step-desc">An all-night challenge. Declaring war on distractions, discarding self-pity, and dedicating 100% of waking hours to the craft.</p>
+            <span class="step-badge">Sacred Vow</span>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="timeline-step right-step scroll-reveal-right" data-step="6">
+          <div class="timeline-dot"><span class="dot-inner"></span></div>
+          <div class="timeline-card">
+            <span class="step-num">STAGE 06</span>
+            <h3 class="step-title">Dream Project</h3>
+            <p class="step-desc">Conceptualizing and building a disruptive tech system. Struggling with thousands of compiler errors, but solving them line by line.</p>
+            <span class="step-badge">First Build</span>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="timeline-step left-step scroll-reveal-left" data-step="7">
+          <div class="timeline-dot"><span class="dot-inner"></span></div>
+          <div class="timeline-card">
+            <span class="step-num">STAGE 07</span>
+            <h3 class="step-title">Rise</h3>
+            <p class="step-desc">First viral user acquisition. Investors calling. The visual transformation of his environment, validating years of silent tears.</p>
+            <span class="step-badge">Scaling Up</span>
+          </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="timeline-step right-step scroll-reveal-right" data-step="8">
+          <div class="timeline-dot"><span class="dot-inner"></span></div>
+          <div class="timeline-card">
+            <span class="step-num">STAGE 08</span>
+            <h3 class="step-title">Legacy</h3>
+            <p class="step-desc">Standing triumphant, serving as a pillar for young middle-class coders worldwide. A loud, solid, indisputable success.</p>
+            <span class="step-badge">Champion Status</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Why Read Efforts 1 (Premium Grid Cards) -->
+  <section id="why-read" class="why-section section-padding">
+    <div class="ambient-glow bg-glow-right"></div>
+    <div class="section-container">
+      <div class="section-header center-align scroll-reveal-up">
+        <span class="section-subtitle">THEMES & REASONS</span>
+        <h2 class="section-title cinematic-text" id="why-section-title">Why Read EFFORTS 1</h2>
+        <p class="section-desc">This is not an ordinary comic. It is a mirror to your own struggles, a blueprint for grit, and an absolute catalyst for consistent self-improvement.</p>
+      </div>
+
+      <!-- Feature Grid -->
+      <div class="why-grid">
+        <!-- Grid Item 1 -->
+        <div class="why-card scroll-reveal-grid" id="why-item-1">
+          <div class="why-card-bg" style="background-image: linear-gradient(135deg, rgba(14,20,38,0.95) 0%, rgba(11,18,32,0.95) 100%);"></div>
+          <div class="why-card-content">
+            <span class="grid-num">01</span>
+            <h3>College Life</h3>
+            <p>The academic pressure cookers, fake friendships, classroom isolation, and the agonizing feeling of of being completely directionless.</p>
+          </div>
+          <div class="grid-card-border"></div>
+        </div>
+
+        <!-- Grid Item 2 -->
+        <div class="why-card scroll-reveal-grid" id="why-item-2">
+          <div class="why-card-bg" style="background-image: linear-gradient(135deg, rgba(14,20,38,0.95) 0%, rgba(11,18,32,0.95) 100%);"></div>
+          <div class="why-card-content">
+            <span class="grid-num">02</span>
+            <h3>Heartbreak</h3>
+            <p>The emotional vacuum of losing loved ones, rejection letters, and using raw, painful isolation to fuel personal excellence.</p>
+          </div>
+          <div class="grid-card-border"></div>
+        </div>
+
+        <!-- Grid Item 3 -->
+        <div class="why-card scroll-reveal-grid" id="why-item-3">
+          <div class="why-card-bg" style="background-image: linear-gradient(135deg, rgba(14,20,38,0.95) 0%, rgba(11,18,32,0.95) 100%);"></div>
+          <div class="why-card-content">
+            <span class="grid-num">03</span>
+            <h3>Coding Journey</h3>
+            <p>The realistic details of learning syntax, encountering severe setup bugs, compiling at 4 AM, and the ecstasy of first logic success.</p>
+          </div>
+          <div class="grid-card-border"></div>
+        </div>
+
+        <!-- Grid Item 4 -->
+        <div class="why-card scroll-reveal-grid" id="why-item-4">
+          <div class="why-card-bg" style="background-image: linear-gradient(135deg, rgba(14,20,38,0.95) 0%, rgba(11,18,32,0.95) 100%);"></div>
+          <div class="why-card-content">
+            <span class="grid-num">04</span>
+            <h3>Startup Dreams</h3>
+            <p>The high-stakes battles of server deployment, scaling servers, pitch revisions, facing investor dismissals, and ultimate market scale.</p>
+          </div>
+          <div class="grid-card-border"></div>
+        </div>
+
+        <!-- Grid Item 5 -->
+        <div class="why-card scroll-reveal-grid" id="why-item-5">
+          <div class="why-card-bg" style="background-image: linear-gradient(135deg, rgba(14,20,38,0.95) 0%, rgba(11,18,32,0.95) 100%);"></div>
+          <div class="why-card-content">
+            <span class="grid-num">05</span>
+            <h3>Family Sacrifices</h3>
+            <p>The crushing pressure of parents spending their retirement backups on education. Real, visceral domestic stakes that command success.</p>
+          </div>
+          <div class="grid-card-border"></div>
+        </div>
+
+        <!-- Grid Item 6 -->
+        <div class="why-card scroll-reveal-grid" id="why-item-6">
+          <div class="why-card-bg" style="background-image: linear-gradient(135deg, rgba(14,20,38,0.95) 0%, rgba(11,18,32,0.95) 100%);"></div>
+          <div class="why-card-content">
+            <span class="grid-num">06</span>
+            <h3>Self Improvement</h3>
+            <p>Ditching trivial dopamine traps, setting ironclad schedules, physical training, and building the physical & mental temple of success.</p>
+          </div>
+          <div class="grid-card-border"></div>
+        </div>
+
+        <!-- Grid Item 7 -->
+        <div class="why-card scroll-reveal-grid" id="why-item-7">
+          <div class="why-card-bg" style="background-image: linear-gradient(135deg, rgba(14,20,38,0.95) 0%, rgba(11,18,32,0.95) 100%);"></div>
+          <div class="why-card-content">
+            <span class="grid-num">07</span>
+            <h3>Mental Struggles</h3>
+            <p>Visceral depictions of imposter syndrome, severe burnout, loneliness, self-sabotaging thoughts, and surviving the dark nights.</p>
+          </div>
+          <div class="grid-card-border"></div>
+        </div>
+
+        <!-- Grid Item 8 -->
+        <div class="why-card scroll-reveal-grid" id="why-item-8">
+          <div class="why-card-bg" style="background-image: linear-gradient(135deg, rgba(14,20,38,0.95) 0%, rgba(11,18,32,0.95) 100%);"></div>
+          <div class="why-card-content">
+            <span class="grid-num">08</span>
+            <h3>Emotional Healing</h3>
+            <p>Moving from pure anger to deep clarity. Making peace with past failures, forgiving oneself, and executing tasks centered in stillness.</p>
+          </div>
+          <div class="grid-card-border"></div>
+        </div>
+
+        <!-- Grid Item 9 -->
+        <div class="why-card scroll-reveal-grid" id="why-item-9">
+          <div class="why-card-bg" style="background-image: linear-gradient(135deg, rgba(14,20,38,0.95) 0%, rgba(11,18,32,0.95) 100%);"></div>
+          <div class="why-card-content">
+            <span class="grid-num">09</span>
+            <h3>Success Journey</h3>
+            <p>The structured climb up the developer and startup ranks. True tactical blueprint, exhibiting how relentless actions yield mass success.</p>
+          </div>
+          <div class="grid-card-border"></div>
+        </div>
+
+        <!-- Grid Item 10 -->
+        <div class="why-card scroll-reveal-grid" id="why-item-10">
+          <div class="why-card-bg" style="background-image: linear-gradient(135deg, rgba(14,20,38,0.95) 0%, rgba(11,18,32,0.95) 100%);"></div>
+          <div class="why-card-content">
+            <span class="grid-num">10</span>
+            <h3>Motivation</h3>
+            <p>A shot of pure adrenaline. Every single page is custom-built to deliver powerful goosebumps and reignite your active life passions.</p>
+          </div>
+          <div class="grid-card-border"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Featured Quote -->
+  <section id="featured-quote" class="featured-quote-section">
+    <div class="stars-overlay"></div>
+    <div class="quote-inner-container">
+      <div class="quote-tag scroll-reveal-fade">VISCERAL REVELATION</div>
+      <h2 class="cinematic-epic-quote" id="epic-scroll-text">
+        <span class="split-word">"Some</span>
+        <span class="split-word">heroes</span>
+        <span class="split-word">don't</span>
+        <span class="split-word">wear</span>
+        <span class="split-word">capes...</span><br>
+        <span class="split-word gold-glow">They</span>
+        <span class="split-word gold-glow">survive</span>
+        <span class="split-word gold-glow">silently."</span>
+      </h2>
+    </div>
+  </section>
+
+  <!-- Section 6: Read Full Comic (Comic Showcase Section) -->
+  <section id="read-now" class="read-now-section section-padding">
+    <div class="ambient-glow bg-glow-left-top"></div>
+    <div class="section-container">
+      <div class="showcase-box scroll-reveal-up" id="showcase-container">
+        
+        <!-- Left Side: 3D Comic Cover -->
+        <div class="comic-3d-wrapper">
+          <div class="comic-card-3d" id="comic-card-3D">
+            <div class="comic-cover" style="background-image: linear-gradient(to bottom, rgba(11, 18, 32, 0.2) 30%, rgba(0, 0, 0, 0.9) 100%), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600');">
+              <div class="cover-glass"></div>
+              <div class="cover-content">
+                <span class="cover-brand">STORYVERSE</span>
+                <h3 class="cover-title">EFFORTS</h3>
+                <div class="cover-number">1</div>
+                <p class="cover-tagline">Silent Grit. Loud Success.</p>
+                <div class="cover-footer">ROHIT'S ODYSSEY</div>
+              </div>
+              <div class="cover-glare" id="cover-glare"></div>
+            </div>
+            <div class="comic-spine"></div>
+            <div class="comic-pages"></div>
+          </div>
+        </div>
+
+        <!-- Right Side: Details and Actions -->
+        <div class="showcase-info">
+          <span class="showcase-badge shine-text">VOL. 01 AVAILABLE NOW</span>
+          <h2 class="showcase-title cinematic-text">Read EFFORTS 1 Now</h2>
+          <p class="showcase-description">
+            Start the journey of Rohit right now. Discover the detailed blueprints of late night grinds, code compiling loops, and the ultimate transformation when silent efforts meet relentless, cold-blooded execution.
+          </p>
+          
+          <div class="reading-stats">
+            <div class="stat-item">
+              <span class="stat-val">80+</span>
+              <span class="stat-lbl">Premium Panels</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">10/10</span>
+              <span class="stat-lbl">Motivation Rating</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">FREE</span>
+              <span class="stat-lbl">Immediate Release</span>
+            </div>
+          </div>
+
+          <div class="showcase-actions">
+            <a href="https://drive.google.com/file/d/1LdAxqytUTKYrrRE8kuTuIsr-YO2SDskT/view?usp=sharing" target="_blank" class="btn btn-primary btn-flex" rel="noreferrer">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+              <span>READ NOW</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1LdAxqytUTKYrrRE8kuTuIsr-YO2SDskT/view?usp=sharing" target="_blank" class="btn btn-outline btn-flex" rel="noreferrer">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              <span>DOWNLOAD PDF</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Message from Efforts 1 -->
+  <section id="message-efforts" class="message-section">
+    <div class="section-container">
+      <div class="glass-message-box scroll-reveal-up" id="message-box">
+        <div class="border-corner top-left"></div>
+        <div class="border-corner top-right"></div>
+        <div class="border-corner bottom-left"></div>
+        <div class="border-corner bottom-right"></div>
+        
+        <div class="scroll-reveal-fade">
+          <span class="message-subtitle">STORYVERSE PHILOSOPHY</span>
+          <p class="wisdom-quote">"Give your efforts where efforts are returned."</p>
+          <div class="wisdom-separator">
+            <span></span>
+            <div class="diamond"></div>
+            <span></span>
+          </div>
+          <p class="wisdom-values text-center">
+            <span class="wisdom-tag">RESPECT YOUR VALUE.</span>
+            <span class="wisdom-tag">PROTECT YOUR TIME.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Coming Soon (Teaser Block) -->
+  <section id="coming-soon" class="coming-soon-section">
+    <div class="nebula-glow"></div>
+    <div class="ambient-rain-overlay" id="teaser-rain"></div>
+    <div class="section-container">
+      <div class="teaser-content center-align">
+        <span class="teaser-eyebrow scroll-reveal-fade">THE UNBREAKABLE SAGA</span>
+        <h1 class="teaser-huge-title scroll-reveal-up" id="coming-soon-title">EFFORTS 2</h1>
+        <h2 class="teaser-subtitle text-yellow scroll-reveal-up">Coming Soon</h2>
+        
+        <!-- Interactive Teaser Cards -->
+        <div class="coming-soon-checklist flex-center">
+          <div class="coming-soon-tag scroll-reveal-card" style="transition-delay: 0.1s">
+            <span class="bullet-dot"></span> Bigger Challenges
+          </div>
+          <div class="coming-soon-tag scroll-reveal-card" style="transition-delay: 0.2s">
+            <span class="bullet-dot"></span> Deeper Emotions
+          </div>
+          <div class="coming-soon-tag scroll-reveal-card" style="transition-delay: 0.3s">
+            <span class="bullet-dot"></span> New Mysteries
+          </div>
+          <div class="coming-soon-tag scroll-reveal-card" style="transition-delay: 0.4s">
+            <span class="bullet-dot"></span> A Bigger Story
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: About The Creator -->
+  <section id="creator" class="creator-section section-padding">
+    <div class="ambient-glow bg-glow-right-bottom"></div>
+    <div class="section-container flex-cols">
+      
+      <!-- Creator Card Layout -->
+      <div class="creator-content scroll-reveal-left">
+        <span class="section-subtitle">THE VISIONARY</span>
+        <h2 class="section-title text-left cinematic-text">Created By</h2>
+        <h1 class="creator-name cinematic-text font-serif">SR</h1>
+        <div class="creator-brand">STORYVERSE</div>
+        
+        <p class="creator-bio">
+          SR is the visionary writer & creator behind STORYVERSE. Passionate about exploring complex human relationships, middle-class sacrifices, the intense realities of tech-grinds, and inspiring readers. Through powerful artwork and visceral writing, he reminds coders and dreamers everywhere that failure is simply raw data for success.
+        </p>
+      </div>
+
+      <!-- Designer Frame Profile Art -->
+      <div class="creator-visual-wrap scroll-reveal-right">
+        <div class="creator-frame" id="creator-visual-fx">
+          <div class="creator-art-background"></div>
+          <div class="creator-portrait" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400');">
+            <!-- Glass Overlay holding brand badges -->
+            <div class="frame-glass-panel">
+              <span class="panel-brand">STORYVERSE AUTHORIZED</span>
+            </div>
+          </div>
+          <div class="frame-glow-line animate-border"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 10: Footer -->
+  <footer id="footer" class="cinematic-footer">
+    <div class="footer-glow"></div>
+    <div class="section-container">
+      
+      <div class="footer-top">
+        <div class="footer-brand-wrap">
+          <h2 class="footer-brand cinematic-text">EFFORTS 1</h2>
+          <p class="footer-tagline">Broken Dreams. Silent Efforts. Loud Success.</p>
+        </div>
+        
+        <div class="footer-links-wrap">
+          <div class="footer-col">
+            <span class="col-title">NAVIGATION</span>
+            <a href="#hero" class="footer-item">Home</a>
+            <a href="#rohit" class="footer-item">Rohit Profile</a>
+            <a href="#timeline" class="footer-item">The Evolution</a>
+            <a href="#why-read" class="footer-item">Themes</a>
+          </div>
+          
+          <div class="footer-col">
+            <span class="col-title">MEMBERSHIP</span>
+            <a href="https://drive.google.com/file/d/1LdAxqytUTKYrrRE8kuTuIsr-YO2SDskT/view?usp=sharing" target="_blank" class="footer-item flex-item-center" rel="noreferrer">
+              <span>Read Comic Vol. 1</span>
+            </a>
+            <a href="#coming-soon" class="footer-item">Efforts 2 Teaser</a>
+          </div>
+
+          <div class="footer-col">
+            <span class="col-title">PUBLISHER</span>
+            <span class="footer-item text-muted">STORYVERSE INC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 STORYVERSE. All Rights Reserved.</p>
+        <div class="author-credits">
+          CREATED BY SR
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll Progress / Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back To Top">
+    <svg class="progress-ring" width="44" height="44">
+      <circle class="progress-ring-circle" stroke="#FBBF24" stroke-width="2" fill="transparent" r="20" cx="22" cy="22"/>
+    </svg>
+    <div class="arrow-icon">↑</div>
+  </button>
+
+</body>
+<!-- Standard Vanilla Script -->
+<script src="/script.js"></script>
+</html>

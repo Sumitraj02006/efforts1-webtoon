@@ -1,0 +1,6 @@
+{
+  "name": "EFFORTS 1",
+  "description": "A premium cinematic website for the motivational webtoon/comic series EFFORTS 1.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
